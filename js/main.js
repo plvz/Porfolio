@@ -13,10 +13,13 @@
   });
   $( ".skill_category" ).click(function() {
     var skills = {
-          "Front-End" : { "Angular" : 55, "jQuery" : 52, "CSS": 40 }
-       ,  "Back-End" : { "Java" : 70, "Python" : 58, "C": 45 }
-       ,  "Data":  { "SQL" : 75, "MongoDB" :30}
+          "Front-End" : { "Angular" : 75, "jQuery" : 65, "CSS": 60 }
+       ,  "Back-End" : { "Java : 6,7 & 8, Spring" : 70, "Python : Djano" : 58, "Nodejs": 45, "C": 50 }
+       ,  "Data":  { "SQL : PL/SQL, Psql, Mysql " : 75, "MongoDB" :30}
+       ,  "Buisness Intelligence":  { "D3JS" : 78, "Tableau Software" : 35 }
        ,  "Ops":  { "Amazon" : 45, "Docker" : 60 }
+       ,  "Agile methodology":  { "Scrum" : 70, "Spotify Squad framework" : 60 }
+       ,  "Practices":  { "TDD" : 70, "BDD" : 60 , "DDD" : 40 }
      };
 
     for (var category in skills) {
