@@ -1,5 +1,7 @@
 (function($) {
   "use strict";
+
+
   $(window).on("load", function() { // makes sure the whole site is loaded
     //preloader
     $("#status").fadeOut(); // will first fade out the loading animation
@@ -11,36 +13,48 @@
 
     });
   });
-  $( ".skill_category" ).click(function() {
+
+  $( "#Front-End" ).click(function() { updateSkills("Front-End") });
+  $( "#Back-End" ).click(function() { updateSkills("Back-End") });
+  $( "#Data" ).click(function() { updateSkills("Data") });
+  $( "#Buisness_Intelligence" ).click(function() { updateSkills("Buisness_Intelligence") });
+  $( "#Ops" ).click(function() { updateSkills("Ops") });
+  $( "#Agile_methodology" ).click(function() { updateSkills("Agile_methodology") });
+  $( "#Practices" ).click(function() { updateSkills("Practices") });
+
+  var updateSkills = function(category) {
     var skills = {
           "Front-End" : { "Angular" : 75, "jQuery" : 65, "CSS": 60 }
        ,  "Back-End" : { "Java : 6,7 & 8, Spring" : 70, "Python : Djano" : 58, "Nodejs": 45, "C": 50 }
        ,  "Data":  { "SQL : PL/SQL, Psql, Mysql " : 75, "MongoDB" :30}
-       ,  "Buisness Intelligence":  { "D3JS" : 78, "Tableau Software" : 35 }
+       ,  "Buisness_Intelligence":  { "D3JS" : 78, "Tableau Software" : 35 }
        ,  "Ops":  { "Amazon" : 45, "Docker" : 60 }
-       ,  "Agile methodology":  { "Scrum" : 70, "Spotify Squad framework" : 60 }
+       ,  "Agile_methodology":  { "Scrum" : 70, "Spotify Squad framework" : 60 }
        ,  "Practices":  { "TDD" : 70, "BDD" : 60 , "DDD" : 40 }
      };
-
-    for (var category in skills) {
-      $( ".skillst" ).empty()
+     $( ".skillst" ).empty()
 
 
       for (var skill in skills[category])
       {
-        console.log(typeof skills[category][skill]);
         var title = '<div class="title head-sm">'+skill+'</div>'
         var countbar = '<div class="count-bar"><div class="count"></div></div>'
         var skillbar = '<div class="skillbar" data-percent="'+skills[category][skill]+'%">'+title+countbar+'</div>'
 
         $(".skillst").append(skillbar)
       }
-    }
+
+
+
+
+
+
+
 
     jQuery('.skillbar').each(function() {
       animateSkills(jQuery(this))
     });
-  });
+  }
 
   function animateSkills(element) {
     jQuery(element).appear(function() {
@@ -228,5 +242,6 @@
       }
     });
   }
+
 
 })(jQuery);
