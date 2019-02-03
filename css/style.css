@@ -449,7 +449,12 @@ img { max-width: 100%; }
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-
+.flag-image{
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 35%;
+}
 /*----------------------------------------- 5) Typography --------------------------------------------------*/
 h1,
 h2,
@@ -968,6 +973,8 @@ ul.portfolio-image li .desc{
   margin: 40px 0 20px 0;
   font-size: 14px;
 }
+
+
 /*---------- g. contact -----------*/
 #contact {padding: 120px 0 200px 0;}
 #contact form {

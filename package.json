@@ -1,0 +1,24 @@
+{
+  "name": "porfolio",
+  "version": "1.0.0",
+  "description": "The Gaël Pellevoizin Portfolio",
+  "main": "index.js",
+  "dependencies": {
+    "i18next": "^10.5.0",
+    "jquery-i18n": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plvz/Porfolio.git"
+  },
+  "author": "Gaël Pellevoizin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/plvz/Porfolio/issues"
+  },
+  "homepage": "https://github.com/plvz/Porfolio#readme"
+}

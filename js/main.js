@@ -244,4 +244,40 @@
   }
 
 
+  i18next
+    .use(i18nextXHRBackend)
+    //.use(i18nextBrowserLanguageDetector)
+    .init({
+      compatibilityJSON: 'v2',
+      fallbackLng: 'fr',
+      debug: true,
+      ns: ['special', 'common'],
+      defaultNS: 'special',
+      backend: {
+        // load from i18next-gitbook repo
+        loadPath: 'i18n/fr.json',
+        crossDomain: true
+      }
+    }, function(err, t) {
+      // init set content
+      console.log(t)
+      updateContent();
+    });
+
+
+  // just set some content and react to language changes
+  // could be optimized using vue-i18next, jquery-i18next, react-i18next, ...
+  function updateContent() {
+    document.getElementById('title').innerHTML = i18next.t('title');
+
+    //document.getElementById('info').innerHTML = `detected user language: "${i18next.language}"  --> loaded languages: "${i18next.languages.join(', ')}"`;
+  }
+
+  function changeLng(lng) {
+    i18next.changeLanguage(lng);
+  }
+
+  i18next.on('languageChanged', () => {
+    updateContent();
+  });
 })(jQuery);
